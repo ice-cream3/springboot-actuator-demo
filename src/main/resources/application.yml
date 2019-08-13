@@ -1,0 +1,34 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /api
+
+spring:
+  profiles:
+    active: test
+
+# 自定义info信息,只是在访问 /actuator/info时显示
+info:
+  author:
+    name: lixl
+    task: actuator
+  content:
+    desc: 监控器使用
+    default: info,health
+    path: http://localhost:8080/actuator/[]
+  app:
+    groupId: @groupId@
+    artifactId: @artifactId@
+    version: @version@
+
+# 开启所有监控器
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: info,other
+#      base-path: /base # 指定监控器的基本路径,一般采用默认路径/actuator
+
+
+
