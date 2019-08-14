@@ -36,6 +36,13 @@
                     exclude: info,other
             #      base-path: /base # 指定监控器的基本路径,一般采用默认路径/actuator
             开启之后可以访问 beans,env 等信息
+            /info 　　　　　　　应用基本信息
+            /health 　　　　　　健康度信息
+            /metrics 　　　　　运行指标
+            /env 　　　　　　　环境变量信息
+            /loggers 　　　　　日志相关
+            /dump 　　　　　　线程相关信息
+            /trace 　　　　　　请求调用轨迹
 
     2.自定义错误页面
         只需要在resources目录下创建二级目录 public/error,然后自定义错误页面即可,本例中定义了404和500页面,
